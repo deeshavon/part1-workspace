@@ -3,7 +3,8 @@ public class Television {
   private String brand;
   private int volume;
 
-  void turnOn() {
+  public void turnOn() {
+    boolean isConnected = verifyInternetConnection();
     System.out.println("The" + brand + " television is on, with a volume of " + volume);
   }
 
@@ -26,7 +27,14 @@ public class Television {
   public void setVolume(int volume) {
     this.volume = volume;
   }
-  public String toString(){
-    return ("Televison: brand="+ getBrand()+ ", volume=25" + getVolume());
+
+  private boolean verifyInternetConnection() {
+    return true;
+  }
+
+
+  @Override
+  public String toString() {
+    return "Televison{brand='" + brand + ", volume" + volume;
   }
 }
