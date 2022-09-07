@@ -40,7 +40,12 @@ public class Television {
   }
 
   public void setBrand(String brand) {
-    this.brand = brand;
+    if(brand.equals("Samsung") || brand.equals("Sony")) {
+      this.brand = brand;
+    }else{
+      System.out.println("Only accepts Samsung, LG or Sony televisions");
+    }
+
   }
 
   public int getVolume() {
@@ -63,6 +68,6 @@ public class Television {
 
   @Override
   public String toString() {
-    return "Televison{brand='" + brand + ", volume" + volume;
+    return "Televison: {brand='" + brand + ", volume" + volume;
   }
 }
