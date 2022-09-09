@@ -7,6 +7,7 @@ public class TelevisionClient {
     Television tv1 = new Television();
     tv1.setBrand("Zenith");
     tv1.setVolume(125);
+    tv1.setDisplay(DisplayType.CRT);
 
 
     tv1.turnOn();

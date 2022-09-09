@@ -6,6 +6,7 @@ public class Television {
   private static int instanceCount = 0;
   private String brand;
   private int volume;
+  private DisplayType display = DisplayType.LED;
 
   public Television() { //line 4 and this line (7) must match
     instanceCount++;
@@ -20,6 +21,11 @@ public class Television {
   public Television(String brand, int volume) {
     this(brand);
     setVolume(volume);
+  }
+
+  public Television(String brand, int volume, DisplayType display) {
+    this(brand);
+    setDisplay(display);
   }
 
   public void turnOn() {
@@ -62,12 +68,20 @@ public class Television {
 
   }
 
+  public DisplayType getDisplay() {
+    return display;
+  }
+
+  public void setDisplay(DisplayType display) {
+    this.display = display;
+  }
+
   private boolean verifyInternetConnection() {
     return true;
   }
 
   @Override
   public String toString() {
-    return "Televison: {brand='" + brand + ", volume" + volume;
+    return "Televison: {brand='" + brand + ", volume" + volume + "display" + display;
   }
 }
