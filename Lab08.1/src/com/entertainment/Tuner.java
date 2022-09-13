@@ -25,15 +25,16 @@ class Tuner {
     private String channel = "Menu";
     private int station;  // internal tuner frequency for the named channel
 
-    public void setChannel(String channel) {
+    //setter line (29) below
+    public void setChannel(String channel)  {
         this.channel = channel;
-        findStation(channel);
-        goToStation();
+        findStation(channel); //method is invoked
+        goToStation(); //method is invoked
     }
 
     public String getChannel() {
         return channel;
-    }
+    } //getter line
 
     private void findStation(String channel) {
         station = Math.abs(channel.toUpperCase().hashCode());
