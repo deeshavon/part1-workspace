@@ -19,12 +19,17 @@ public class HourlyEmployee extends Employee {
     setHours(hours);
 
     }
+
+
   // TODO: 9/13/22 Declare and implement a constructor that takes name, hireDate, rate, hours as parameters. 
   
   // TODO: 9/13/22 Generate setters and getters for rate and hours.  
 
   // TODO: 9/13/22 Override toString method
 
+  public void pay() {
+    System.out.printf("%s is paid hourly, for a total of %,.2f%n", getName(), getHours() * getRate() );
+  }
 
   public double getRate() {
     return rate;
@@ -45,6 +50,6 @@ public class HourlyEmployee extends Employee {
   @Override
   public String toString() {
     // return.toString() +
-    return String.format("%s Rate =%s ", super.toString(), getHours(),getRate());
+    return String.format("%s, rate =%.2f, hours=%.1f ", super.toString(), getHours(),getRate()); //"a format string" w/in first () should go on this line
   }
 }

@@ -17,6 +17,10 @@ public class SalariedEmployee extends Employee {
 
   }
 
+  public void pay() {
+    System.out.printf("%s is paid a salary of %,.2f%n", getName(), getSalary());
+    // System.out.println(getName() + "is paid a salary of" + getSalary());
+  }
   public double getSalary() {
     return salary;
   }
@@ -27,6 +31,7 @@ public class SalariedEmployee extends Employee {
 
   @Override
   public String toString() {
-    return String.format("%s Salary =%s ", super.toString(), getSalary());
+    return super.toString() + ", salary=" + getSalary();
+   // return String.format("%s Salary =%s ", super.toString(), getSalary());
   }
 }
