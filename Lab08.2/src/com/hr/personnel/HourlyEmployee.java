@@ -45,6 +45,6 @@ public class HourlyEmployee extends Employee {
   @Override
   public String toString() {
     // return.toString() +
-    return getName() + " was hired on " + getHireDate() + " at a rate of " + getRate() +  " per hour for " + getHours() + " per week ";
+    return String.format("%s Rate =%s ", super.toString(), getHours(),getRate());
   }
 }
