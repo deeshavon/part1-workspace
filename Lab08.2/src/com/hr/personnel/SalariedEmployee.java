@@ -12,6 +12,21 @@ public class SalariedEmployee extends Employee {
     super(name, hireDate);
   }
   public SalariedEmployee(String name, LocalDate hireDate, double salary) {
+    this(name, hireDate);
+    setSalary(salary);
 
+  }
+
+  public double getSalary() {
+    return salary;
+  }
+
+  public void setSalary(double salary) {
+    this.salary = salary;
+  }
+
+  @Override
+  public String toString() {
+    return String.format("%s Salary =%s ", super.toString(), getSalary());
   }
 }
