@@ -15,6 +15,8 @@ public class HourlyEmployee extends Employee {
     private double rate;
     private double hours;
 
+    public static final double FEDERAL_MINIMUM_WAGE = 15.0;
+
     // constructors
     public HourlyEmployee() {
     }
@@ -46,8 +48,12 @@ public class HourlyEmployee extends Employee {
         return rate;
     }
 
-    public void setRate(double rate) {
-        this.rate = rate;
+    public void setRate(double rate) throws IllegalArgumentException {
+        if(rate < FEDERAL_MINIMUM_WAGE)
+            throw new IllegalArgumentException("Illegal wage" + rate );
+            this.rate = rate;
+
+
     }
 
     public double getHours() {
